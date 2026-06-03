@@ -1,0 +1,59 @@
+name: VibeChat
+version: '${version}'
+main: mc.gyusik.vibechat.VibeChatPlugin
+api-version: '1.21'
+authors: [ Gyusik, Codex ]
+softdepend: [ Vault, PlaceholderAPI, floodgate ]
+commands:
+  vibechat:
+    description: VibeChat system command.
+    aliases: [ vc ]
+    usage: /vc <help|reload|sound|ignore|unignore|mute|unmute|invise>
+  local:
+    description: Switch to local chat.
+  global:
+    description: Switch to global chat.
+  msg:
+    description: Send a private message.
+    aliases: [ m, w, tell, t, message ]
+  reply:
+    description: Reply to last private message.
+    aliases: [ r ]
+  ignore:
+    description: Ignore a player.
+  unignore:
+    description: Stop ignoring a player.
+  mute:
+    description: Temporarily mute a player in VibeChat.
+    aliases: [ tempmute ]
+  unmute:
+    description: Remove VibeChat mute from a player.
+  discord:
+    description: Show Discord link.
+  telegram:
+    description: Show Telegram link.
+  site:
+    description: Show site link.
+permissions:
+  vibechat.admin:
+    default: op
+  vibechat.reload:
+    default: op
+  vibechat.mute:
+    default: op
+  vibechat.unmute:
+    default: op
+  vibechat.invise:
+    default: op
+  vibechat.bypass.all:
+    default: false
+  vibechat.bypass.spam:
+    default: false
+  vibechat.bypass.repeat:
+    default: false
+  vibechat.bypass.badwords:
+    default: false
+  vibechat.bypass.links:
+    default: false
+  vibechat.bypass.mute:
+    default: false

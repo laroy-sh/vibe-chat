@@ -1,0 +1,51 @@
+prefix: "&8[&bЧат&8] &r"
+
+channels:
+  local-radius: 126
+  local-label: "&2[Локал]"
+  global-label: "&e[Мир]"
+  clan-label: "&b[Клан]"
+  public-reply-label: "&b[для]"
+  local-format: "{label} {prefix}{player}{suffix}{reply} &8➜ &f{message}"
+  global-format: "{label} {prefix}{player}{suffix}{reply} &8➜ &f{message}"
+  clan-format: "{label} {clan} {prefix}{player}{suffix} &8➜ &f{message}"
+
+modes:
+  idle-reset-seconds: 90
+
+moderation:
+  anti-spam-ms: 2500
+  fast-warn-cooldown-ms: 1200
+  burst:
+    max-messages: 3
+    window-seconds: 10
+    warn-cooldown-seconds: 4
+  repeat-block-seconds: 30
+  repeat-warn-on: 3
+  block-links: true
+  block-ips: true
+  badword-replacement: "п***"
+  badphrase-replacement: "#!?#"
+
+private-messages:
+  offline-limit: 5
+  format-in: "&d[ЛС] &7от &f{sender} &8➜ &f{message}"
+  format-out: "&d[ЛС] &7для &f{receiver} &8➜ &f{message}"
+
+sounds:
+  enabled-default: true
+  private-message: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  mention: "BLOCK_NOTE_BLOCK_PLING"
+  global: "UI_BUTTON_CLICK"
+  error: "BLOCK_NOTE_BLOCK_BASS"
+
+links:
+  discord: ""
+  telegram: ""
+  site: ""
+
+features:
+  clickable-player-names: true
+  clickable-commands: true
+  mentions: true
+  experimental-invise: true
