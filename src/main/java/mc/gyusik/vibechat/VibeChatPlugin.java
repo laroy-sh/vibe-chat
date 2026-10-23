@@ -296,7 +296,17 @@ public final class VibeChatPlugin extends JavaPlugin implements Listener, TabExe
             return;
         }
         String label = split[0].toLowerCase(Locale.ROOT);
+        int namespaceEnd = label.indexOf(':');
+        if (namespaceEnd > 0 && Set.of("minecraft", "bukkit", "vibechat").contains(label.substring(0, namespaceEnd))) {
+            label = label.substring(namespaceEnd + 1);
+        }
         String[] args = Arrays.copyOfRange(split, 1, split.length);
+        if (Set.of("me", "teammsg", "tm").contains(label) && isMuted(event.getPlayer())) {
+            event.setCancelled(true);
+            send(event.getPlayer(), msg("muted").replace("{time}", formatMuteTime(event.getPlayer())));
+            play(event.getPlayer(), "sounds.error");
+            return;
+        }
         if (Set.of("vc", "vibechat").contains(label)) {
             event.setCancelled(true);
             commandVc(event.getPlayer(), args);
