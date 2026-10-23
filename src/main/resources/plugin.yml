@@ -45,6 +45,8 @@ permissions:
     default: op
   vibechat.invise:
     default: op
+  vibechat.color:
+    default: op
   vibechat.bypass.all:
     default: false
   vibechat.bypass.spam:
